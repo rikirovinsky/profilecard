@@ -1,0 +1,56 @@
+@import url("https://fonts.google.com/specimen/Kumbh+Sans");
+
+:root {
+  --darkCyan: #19a2ae;
+  --veryDarkDesaturatedBlue: #2d3248;
+  --darkGrayishBlue: #6a6f81;
+  --darkGray: #969696;
+}
+
+body {
+  font-family: kumbh, sans serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--darkCyan);
+  display: ;
+}
+
+.profile-wrapper {
+  position: absolute;
+  z-index: 100;
+}
+
+.top {
+  position: absolute;
+  bottom: 40%;
+  right: 40%;
+}
+
+.bottom {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+/* Footer */
+.attribution {
+  position: absolute;
+  z-index: 100;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/* ## Layout Mobile: 375px */
+
+/* ## Layout Desktop: 1440px */
