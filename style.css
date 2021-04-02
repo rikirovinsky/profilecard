@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: kumbh, sans serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
 }
@@ -19,13 +19,13 @@ body {
   position: relative;
   overflow: hidden;
   background-color: var(--darkCyan);
-  display: ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.profile-wrapper {
-  position: absolute;
-  z-index: 100;
-}
+/* Background pictures */
 
 .top {
   position: absolute;
@@ -39,10 +39,81 @@ body {
   left: 40%;
 }
 
+/* Profile style */
+
+.profile-wrapper {
+  border-radius: 15px;
+  height: 45vh;
+  width: 80vw;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("images/bg-pattern-card.svg");
+  background-size: 100% 30%;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.picture-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.picture-wrapper img {
+  border-radius: 50%;
+  border: solid white 5px;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+span {
+  font-weight: 800;
+}
+
+.name-wrapper {
+  width: 100%;
+  text-align: center;
+  border-bottom: solid #a7a4a4 1px;
+  padding: 20px 0;
+  line-height: 30px;
+}
+
+.description-wrapper ul {
+  list-style: none;
+  display: flex;
+  padding: 30px 0 0;
+  margin: 0;
+  width: 100%;
+}
+
+.description-wrapper ul li {
+  text-align: center;
+  float: left;
+  font-weight: lighter;
+  font-size: 10px;
+  color: #a7a4a4;
+  line-height: 20px;
+  padding: 0 15px;
+}
+
+.description-wrapper ul li span {
+  font-size: 18px;
+  font-weight: 800;
+  color: #000000;
+}
+
 /* Footer */
 .attribution {
-  position: absolute;
-  z-index: 100;
+  position: relative;
   font-size: 11px;
   text-align: center;
 }
@@ -50,7 +121,5 @@ body {
 .attribution a {
   color: #3e52a3;
 }
-
-/* ## Layout Mobile: 375px */
 
 /* ## Layout Desktop: 1440px */
