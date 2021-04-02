@@ -1,4 +1,4 @@
-@import url("https://fonts.google.com/specimen/Kumbh+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
 
 :root {
   --darkCyan: #19a2ae;
@@ -7,10 +7,15 @@
   --darkGray: #969696;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .container {
@@ -42,24 +47,27 @@ body {
 /* Profile style */
 
 .profile-wrapper {
+  margin: 0 0 10px;
   border-radius: 15px;
-  height: 45vh;
-  width: 80vw;
+  height: 400px;
+  width: 300px;
   position: relative;
-  z-index: 100;
+  z-index: 2;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
   background: url("images/bg-pattern-card.svg");
-  background-size: 100% 30%;
+  background-size: 100% 35%;
   background-repeat: no-repeat;
   background-color: white;
 }
 
+/* Picture */
+
 .picture-wrapper {
-  margin-top: 50px;
   display: flex;
   justify-content: center;
+  margin: 50px 0 20px 0;
 }
 
 .picture-wrapper img {
@@ -67,30 +75,53 @@ body {
   border: solid white 5px;
 }
 
+/* Information */
+
 .text-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
   height: auto;
 }
 
-span {
+.text-wrapper span {
   font-weight: 800;
 }
 
-.name-wrapper {
+.personal-info-wrapper {
   width: 100%;
-  text-align: center;
   border-bottom: solid #a7a4a4 1px;
-  padding: 20px 0;
-  line-height: 30px;
+  padding: 0 0 40px 0;
+}
+
+.personal-info-wrapper .name {
+  display: inline-block;
+  margin-right: -4px;
+  width: 65%;
+  text-align: right;
+  font-weight: 800;
+}
+
+.personal-info-wrapper .age {
+  display: inline-block;
+  margin-right: -4px;
+  margin-left: 5px;
+  color: #a7a4a4;
+  text-align: left;
+}
+
+.personal-info-wrapper .city {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 13px;
+  color: #a7a4a4;
+  line-height: 20px;
 }
 
 .description-wrapper ul {
   list-style: none;
   display: flex;
-  padding: 30px 0 0;
+  padding: 40px 0 0;
   margin: 0;
   width: 100%;
 }
@@ -101,25 +132,64 @@ span {
   font-weight: lighter;
   font-size: 10px;
   color: #a7a4a4;
-  line-height: 20px;
+  line-height: 15px;
   padding: 0 15px;
 }
 
 .description-wrapper ul li span {
-  font-size: 18px;
   font-weight: 800;
   color: #000000;
+  font-size: 18px;
 }
 
 /* Footer */
+
 .attribution {
   position: relative;
   font-size: 11px;
   text-align: center;
+  z-index: 10;
 }
 
 .attribution a {
+  position: relative;
   color: #3e52a3;
 }
 
 /* ## Layout Desktop: 1440px */
+
+@media only screen and (min-width: 760px) {
+  body {
+    font-size: 26px;
+  }
+
+  .top {
+    position: absolute;
+    bottom: 60%;
+    right: 60%;
+  }
+
+  .bottom {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+  }
+
+  .profile-wrapper {
+    height: 500px;
+    width: 450px;
+  }
+
+  .personal-info-wrapper .city {
+    font-size: 14px;
+  }
+
+  .description-wrapper ul li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .description-wrapper ul li span {
+    font-size: 26px;
+  }
+}
