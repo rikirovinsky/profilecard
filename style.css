@@ -7,11 +7,6 @@
   --darkGray: #969696;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
@@ -57,7 +52,6 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   background: url("images/bg-pattern-card.svg");
-  background-size: 100% 35%;
   background-repeat: no-repeat;
   background-color: white;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
