@@ -9,11 +9,10 @@
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
+  font-weight: 900;
 }
 
-.container {
+.main-container {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -29,28 +28,29 @@ body {
 
 .top {
   position: absolute;
-  bottom: 40%;
-  right: 40%;
+  bottom: 30%;
+  right: 30%;
 }
 
 .bottom {
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 30%;
+  left: 30%;
 }
 
 /* Profile style */
 
 .profile-wrapper {
-  margin: 0 0 10px;
+  margin-bottom: 10px;
   border-radius: 15px;
-  height: 400px;
+  padding-top: 90px;
+  height: 300px;
   width: 300px;
   position: relative;
   z-index: 2;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   background: url("images/bg-pattern-card.svg");
   background-repeat: no-repeat;
   background-color: white;
@@ -62,7 +62,6 @@ body {
 .picture-wrapper {
   display: flex;
   justify-content: center;
-  margin: 50px 0 20px 0;
 }
 
 .picture-wrapper img {
@@ -72,51 +71,40 @@ body {
 
 /* Information */
 
+.grey {
+  color: var(--darkGray);
+}
+
+.small {
+  font-size: 12px;
+}
+
+.medium {
+  font-size: 14px;
+}
+
 .text-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
-}
-
-.text-wrapper span {
-  font-weight: 800;
+  text-align: center;
+  padding-top: 15px;
 }
 
 .personal-info-wrapper {
   width: 100%;
-  border-bottom: solid #a7a4a4 1px;
-  padding: 0 0 40px 0;
+  border-bottom: solid #a7a4a4b2 0.9px;
+  padding-bottom: 40px;
 }
 
-.personal-info-wrapper .name {
-  display: inline-block;
-  margin-right: -4px;
-  width: 65%;
-  text-align: right;
-  font-weight: 800;
-}
-
-.personal-info-wrapper .age {
-  display: inline-block;
-  margin-right: -4px;
-  margin-left: 5px;
-  color: #a7a4a4;
-  text-align: left;
-}
-
-.personal-info-wrapper .city {
-  text-align: center;
-  font-weight: lighter;
-  font-size: 12px;
-  color: #a7a4a4;
-  line-height: 25px;
+.personal-info-wrapper p {
+  line-height: 20px;
 }
 
 .description-wrapper ul {
   list-style: none;
   display: flex;
-  padding: 40px 0 0;
+  padding-top: 30px;
   margin: 0;
   width: 100%;
 }
@@ -125,16 +113,8 @@ body {
   text-align: center;
   float: left;
   font-weight: lighter;
-  font-size: 12px;
-  color: #a7a4a4;
-  line-height: 15px;
+  line-height: 20px;
   padding: 0 15px;
-}
-
-.description-wrapper ul li span {
-  font-weight: 800;
-  color: #000000;
-  font-size: 18px;
 }
 
 /* Footer */
@@ -156,37 +136,15 @@ body {
 /* ## Layout Desktop: 1440px */
 
 @media only screen and (min-width: 760px) {
-  body {
-    font-size: 26px;
-  }
-
   .top {
     position: absolute;
-    bottom: 60%;
-    right: 60%;
+    bottom: 50%;
+    right: 50%;
   }
 
   .bottom {
     position: absolute;
-    top: 60%;
-    left: 60%;
-  }
-
-  .profile-wrapper {
-    height: 500px;
-    width: 450px;
-  }
-
-  .personal-info-wrapper .city {
-    font-size: 14px;
-  }
-
-  .description-wrapper ul li {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .description-wrapper ul li span {
-    font-size: 26px;
+    top: 50%;
+    left: 50%;
   }
 }
