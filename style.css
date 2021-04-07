@@ -61,12 +61,13 @@ body {
 
 .picture-wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .picture-wrapper img {
-  width: 96px;
-  height: 96px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
   border: solid white 5px;
 }
